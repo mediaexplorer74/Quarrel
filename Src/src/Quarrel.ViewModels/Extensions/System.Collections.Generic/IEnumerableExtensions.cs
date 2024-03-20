@@ -3,6 +3,7 @@
 // Legere: https://www.microsoft.com/store/apps/9PHJRVCSKVJZ
 
 using JetBrains.Annotations;
+using System.Diagnostics;
 using System.Linq;
 using System.Runtime.CompilerServices;
 
@@ -34,14 +35,18 @@ namespace System.Collections.Generic
         public static int IndexOf<T>([NotNull] this IEnumerable<T> items, [NotNull] Func<T, bool> predicate)
         {
             int index = 0;
-            foreach (T item in items)
-            {
-                if (predicate(item))
-                {
-                    return index;
-                }
 
-                index++;
+            if (items != null)
+            {
+                foreach (T item in items)
+                {
+                    if (predicate(item))
+                    {
+                        return index;
+                    }
+
+                    index++;
+                }
             }
 
             return -1;

@@ -134,7 +134,10 @@ namespace Quarrel.ViewModels
                     }
 
                     // Add DM
-                    var dmGuild = new BindableGuild(new Guild() { Name = "DM", Id = "DM" }) { Position = -1 };
+                    BindableGuild dmGuild = new BindableGuild(new Guild() { Name = "DM", Id = "DM" })
+                    { 
+                        Position = -1 
+                    };
 
                     _guildsService.AddOrUpdateGuild(dmGuild.Model.Id, dmGuild);
 

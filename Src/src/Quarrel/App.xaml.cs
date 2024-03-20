@@ -253,7 +253,13 @@ namespace Quarrel
             var deferral = e.SuspendingOperation.GetDeferral();
 
 
-            var status = await new ApplicationTrigger().RequestAsync();
+            ApplicationTriggerResult status = default;
+
+            try
+            {
+                status = await new ApplicationTrigger().RequestAsync();
+            }
+            catch { }
 
             // TODO: Save application state and stop any background activity
             deferral.Complete();
