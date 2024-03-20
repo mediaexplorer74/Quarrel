@@ -12,8 +12,8 @@ Store link: https://www.microsoft.com/en-gb/p/quarrel-unofficial-discord-client/
 - Os Win. build (target)  set at (to) 18362.
 - Min. Win. Os win build (target) set at (to) 15063.
 - iPhone SE LoginPage "emulation" added (old sweet user-agent "mechanics" used) 
-- Precompiled WebRTC libs deleted for repo size optimization (locate them at original https://github.com/WinAppCommunity/Quarrel/tree/insider and use them for compilation succeess).
-- WebView control damaged, no ipHoneEmulation. You need temporally inject your Discord token into LoginPage.cs :
+- Precompiled WebRTC libs deleted for repo size optimization (locate them at original https://github.com/WinAppCommunity/Quarrel/tree/insider and use them for compilation success).
+- WebView control damaged, no iPhone Emulation realized. You need to inject your Discord token into LoginPage.cs (as temporary solution of this problem):
 ```
  private async Task<string> GetTokenFromWebView()
  {
