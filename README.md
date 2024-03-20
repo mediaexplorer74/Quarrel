@@ -1,12 +1,16 @@
 # Quarrel
-My fork of Quarell project for my own micro-research.
+My fork of Quarell project for my own micro-research (Goal: some lite version of Quarrel for W10M).
 
 ## About
+"Quarrel V21" (codename)
+
 A discord client for the Universal Windows Platform.  
 Store link: https://www.microsoft.com/en-gb/p/quarrel-unofficial-discord-client/9nbrwj777c8r
 
 ![image](/Images/shot01.png)
 ![image](/Images/shot02.png)
+![image](/Images/shot03.png)
+![image](/Images/shot04.png)
 
 ## Tech details
 - Os Win. build (target)  set at (to) 18362.
@@ -23,7 +27,7 @@ Store link: https://www.microsoft.com/en-gb/p/quarrel-unofficial-discord-client/
 ```
 
 ## Status
-Early bird. Draft. No W10M testing yet.
+Early bird. No Discord token change...
 
 
 ## Reference(s)
