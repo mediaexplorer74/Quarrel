@@ -27,8 +27,9 @@ Store link: https://www.microsoft.com/en-gb/p/quarrel-unofficial-discord-client/
 ```
 
 ## Status
-Early bird. No Discord token change...
-
+- Early bird. Build failure (at now)... resources problem, etc.
+- No Discord token change field yet.
+- Solution optimization (project refactoring) started.
 
 ## Reference(s)
 https://github.com/WinAppCommunity/Quarrel/tree/insider Quarrel Insider branch (Discontinued/Obsolete W10M-compatible project)
