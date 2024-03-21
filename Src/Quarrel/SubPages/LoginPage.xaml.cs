@@ -156,7 +156,7 @@ namespace Quarrel.SubPages
         private async Task<string> GetTokenFromWebView()
         {
             // Discord doesn't allow access to localStorage so create an iframe to bypass this.
-            string token = "OTM0MTM5Mjk3Njg1MTg0NTcz.GJswe0.VevEiHTmtoNLi0YLY_4dNF3OIl9rGtDtraKdzk";/*await CaptchaView.InvokeScriptAsync(
+            string token = await CaptchaView.InvokeScriptAsync(
                 "eval",
                 new[]
                 {
@@ -165,7 +165,7 @@ namespace Quarrel.SubPages
                     document.body.appendChild(iframe);
                     iframe.contentWindow.localStorage.getItem('token');
                     //'<<token>>'",
-                });*/
+                });
 
             AnalyticsService.Log(Constants.Analytics.Events.TokenIntercepted);
 
