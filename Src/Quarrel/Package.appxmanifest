@@ -10,7 +10,7 @@
 	<Identity
 	  Name="ME.QuarrelV21"
 	  Publisher="CN=Admin"
-	  Version="21.0.0.0" />
+	  Version="21.0.10.0" />
 
 	<mp:PhoneIdentity PhoneProductId="d72cb58c-7904-44c8-a611-cf4dddbc7021" PhonePublisherId="27200000-0012-0021-0011-008000007021"/>
 

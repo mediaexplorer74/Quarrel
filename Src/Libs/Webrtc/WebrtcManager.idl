@@ -1,4 +1,5 @@
-namespace Webrtc{
+namespace Webrtc
+{
 	[default_interface]
 	runtimeclass WebrtcManager
 	{

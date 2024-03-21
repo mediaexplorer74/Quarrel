@@ -2,11 +2,11 @@
 My fork of Quarell project for my own micro-research (Goal: some lite version of Quarrel for W10M).
 
 ## About
-"Quarrel V21" (codename)
+This is "Quarrel V21" (codename):
+- A discord client for the Universal Windows Platform.  
+- Token authorization realized.
 
-A discord client for the Universal Windows Platform.  
-Store link: https://www.microsoft.com/en-gb/p/quarrel-unofficial-discord-client/9nbrwj777c8r
-
+## Screenshots
 ![image](/Images/shot01.png)
 ![image](/Images/shot02.png)
 ![image](/Images/shot03.png)
@@ -17,19 +17,12 @@ Store link: https://www.microsoft.com/en-gb/p/quarrel-unofficial-discord-client/
 - Min. Win. Os win build (target) set at (to) 15063.
 - iPhone SE LoginPage "emulation" added (old sweet user-agent "mechanics" used) 
 - Precompiled WebRTC libs deleted for repo size optimization (locate them at original https://github.com/WinAppCommunity/Quarrel/tree/insider and use them for compilation success).
-- WebView control damaged, no iPhone Emulation realized. You need to inject your Discord token into LoginPage.cs (as temporary solution of this problem):
-```
- private async Task<string> GetTokenFromWebView()
- {
-     // Discord doesn't allow access to localStorage so create an iframe to bypass this.
-     string token = "paste your token here";
-     ...
-```
+- EDGE WebView control obsolete, so no iPhone Emulation appeared :(
 
 ## Status
-- Early bird. Build failure (at now)... resources problem, etc.
-- No Discord token change field yet.
-- Solution optimization (project refactoring) started.
+- Early bird. PoC. Login-Password auth mode still broken.
+- Discord token change Dialog implemented. 
+- Solution optimization (project refactoring) provided (Advertising & App Center Telemetry cut-off).
 
 ## Reference(s)
 https://github.com/WinAppCommunity/Quarrel/tree/insider Quarrel Insider branch (Discontinued/Obsolete W10M-compatible project)

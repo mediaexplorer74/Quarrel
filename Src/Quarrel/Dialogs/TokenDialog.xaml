@@ -8,39 +8,33 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
     xmlns:controls="using:Quarrel.Controls"
     mc:Ignorable="d"
-    PrimaryButtonText="PrimaryButtonText"
-    SecondaryButtonText="SecondaryButtonText"
-    CloseButtonText="CloseButtonText"
-    Background="{ThemeResource BackgroundSecondaryBrush}"
-    PrimaryButtonStyle="{ThemeResource AccentButtonStyle}"
-    SecondaryButtonClick="ContentDialog_SecondaryButtonClick"
-    CloseButtonClick="ContentDialog_CloseButtonClick">
-
+    PrimaryButtonText="Approve"
+    CloseButtonText="Cancel"
+    PrimaryButtonClick="ContentDialog_PrimaryButtonClick"
+    CloseButtonClick="ContentDialog_CloseButtonClick"
+    >
+    
     <Grid MaxWidth="400">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        
+
         <TextBlock 
-            x:Name="TitleTextBlock" x:Uid="/Dialogs/TokenTitle" 
-                   Style="{StaticResource SubtitleTextBlockStyle}" 
+            x:Name="TitleTextBlock" 
+            x:Uid="/Dialogs/TokenTitle" 
+            Style="{StaticResource SubtitleTextBlockStyle}" 
             TextWrapping="Wrap" 
-            Grid.Column="1" Text="/Dialogs/TokenTitle"/>
+            Grid.Column="1" 
+            Text="Enter your personal Discord authorizarion token:"/>
+
+
+
+        <PasswordBox 
+            x:Name="TokenTextBox" 
+            Margin="0,12,0,0" 
+            Grid.Row="2"/>
         
-        <!--controls:MarkdownTextBlock x:Name="SubtitleTextBlock"
-                                    x:Uid="/Dialogs/TokenSubtitle"
-                                    Grid.Row="1"
-                                    Text="/Dialogs/TokenSubtitle"
-                                    LinkClicked="SubtitleTextBlock_LinkClicked"/-->
-
-        <TextBlock 
-        x:Name="SubtitleTextBlock" x:Uid="/Dialogs/TokenSubtitle" 
-        Style="{StaticResource SubtitleTextBlockStyle}" 
-         TextWrapping="Wrap" 
-         Grid.Column="1" Text="/Dialogs/TokenSubtitle"/>
-
-        <PasswordBox x:Name="TokenTextBox" Margin="0,12,0,0" Grid.Row="2"/>
     </Grid>
 </ContentDialog>

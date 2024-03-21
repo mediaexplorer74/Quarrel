@@ -1,12 +1,14 @@
-﻿// Copyright (c) Quarrel. All rights reserved.
+﻿// LoginPage
 
 using GalaSoft.MvvmLight.Ioc;
+using Quarrel.Dialogs;
 using Quarrel.SubPages.Interfaces;
 using Quarrel.ViewModels.Helpers;
 using Quarrel.ViewModels.Services.Analytics;
 using Quarrel.ViewModels.Services.Discord.Rest;
 using Quarrel.ViewModels.Services.Navigation;
 using System;
+using System.Diagnostics;
 using System.Threading.Tasks;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -20,15 +22,10 @@ namespace Quarrel.SubPages
     /// </summary>
     public sealed partial class LoginPage : UserControl, IFullscreenSubPage
     {
+        private static readonly string UserAgentID = "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1";
         private IAnalyticsService _analyticsService = null;
         private IDiscordService _discordService = null;
         private ISubFrameNavigationService _subFrameNavigationService = null;
-
-        private static readonly String UserAgentID = 
-            "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1";
-           // "Mozilla/5.0 (Windows NT 10.0; Win64; x64) " +
-           // "AppleWebKit/537.36 (KHTML, like Gecko) " +
-           // "Chrome/70.0.3538.102 Safari/537.36 Edge/18.19041";  // User-agent 
 
         /// <summary>
         /// Initializes a new instance of the <see cref="LoginPage"/> class.
@@ -80,17 +77,31 @@ namespace Quarrel.SubPages
 
             requestMessage.Headers.Add("User-Agent", UserAgentID);
 
-            //CaptchaView.Navigate(new Uri("https://discord.com/app"));
             CaptchaView.NavigateWithHttpRequestMessage(requestMessage);
         }
 
-        private void LoginWithToken_Click(object sender, RoutedEventArgs e)
+        private async void LoginWithToken_Click(object sender, RoutedEventArgs e)
         {
-            MainContent.Visibility = Visibility.Visible;
-            CaptchaView.Visibility = Visibility.Collapsed;
+           
+            var dialog = new TokenDialog();
+            await dialog.ShowAsync();
 
-            // TODO: Login with token page
+            if (!string.IsNullOrWhiteSpace(dialog.Token))
+            {
+                Debug.WriteLine("[i] LoginPage: getting token ok");
+
+                MainContent.Visibility = Visibility.Visible;
+                CaptchaView.Visibility = Visibility.Collapsed;
+
+                await DiscordService.Login(dialog.Token, true);
+                SubFrameNavigationService.GoBack();               
+            }
+            else
+            {
+                Debug.WriteLine("[i] LoginPage: getting token failed");
+            }
         }
+
 
         private async void ForgotPassword_Click(object sender, RoutedEventArgs e)
         {
@@ -105,16 +116,11 @@ namespace Quarrel.SubPages
             }
         }
 
-        private void MFAsms_Click(object sender, RoutedEventArgs e)
-        {
-            // TODO: MFA sms
-        }
-
         private async void ScriptNotify(object sender, NotifyEventArgs e)
         {
             // Respond to the script notification.
 
-            if (e.CallingUri.AbsolutePath == "/app") //... == "/app")
+            if (e.CallingUri.AbsolutePath == "/app") 
             {
                 string token = await GetTokenFromWebView();
                 if (!string.IsNullOrEmpty(token))
@@ -141,7 +147,7 @@ namespace Quarrel.SubPages
                 ",
                 });
 
-            if (args.Uri.AbsolutePath == "/app")//(args.Uri.AbsolutePath == "/app")
+            if (args.Uri.AbsolutePath == "/app")
             {
                 string token = await GetTokenFromWebView();
                 if (!string.IsNullOrEmpty(token))

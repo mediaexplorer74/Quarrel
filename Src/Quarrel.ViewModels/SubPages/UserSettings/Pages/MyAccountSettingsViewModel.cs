@@ -6,6 +6,8 @@ using GalaSoft.MvvmLight.Command;
 using GalaSoft.MvvmLight.Ioc;
 using Quarrel.ViewModels.Services.Discord.CurrentUser;
 using Quarrel.ViewModels.Services.Discord.Rest;
+using System;
+using System.Diagnostics;
 
 namespace Quarrel.ViewModels.SubPages.UserSettings.Pages
 {
@@ -207,7 +209,15 @@ namespace Quarrel.ViewModels.SubPages.UserSettings.Pages
                 };
             }
 
-            CurrentUsersService.CurrentUser.Model = await SimpleIoc.Default.GetInstance<IDiscordService>().UserService.ModifyCurrentUser(modify);
+            try
+            {
+                CurrentUsersService.CurrentUser.Model =
+                    await SimpleIoc.Default.GetInstance<IDiscordService>().UserService.ModifyCurrentUser(modify);
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("[ex] Modify user data exception: " + ex.Message);
+            }
         }
     }
 }

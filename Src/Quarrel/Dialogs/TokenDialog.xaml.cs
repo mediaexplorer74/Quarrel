@@ -21,36 +21,28 @@ namespace Quarrel.Dialogs
 {
     public sealed partial class TokenDialog : ContentDialog
     {
-        public string Token =>
-            TokenTextBox.Password;
+        public string Token
+        {
+            get
+            {
+                return TokenTextBox.Password;
+            }
+        }
 
         public TokenDialog()
         {
             this.InitializeComponent();
         }
 
-        private async void ContentDialog_SecondaryButtonClick(ContentDialog sender, ContentDialogButtonClickEventArgs args)
+        private void ContentDialog_PrimaryButtonClick(ContentDialog sender, ContentDialogButtonClickEventArgs args)
         {
-            args.Cancel = true;
-
-            var picker = new FileOpenPicker();
-            picker.FileTypeFilter.Add(".txt");
-            var file = await picker.PickSingleFileAsync();
-
-            if (file != null)
-            {
-                TokenTextBox.Password = await FileIO.ReadTextAsync(file);
-            }
+           TokenTextBox.Password = TokenTextBox.Password;
         }
 
         private void ContentDialog_CloseButtonClick(ContentDialog sender, ContentDialogButtonClickEventArgs args)
         {
             TokenTextBox.Password = "";
         }
-
-        //private void SubtitleTextBlock_LinkClicked(object sender, Controls.LinkClickedEventArgs e)
-        //{
-        //
-        //}
+         
     }
 }
