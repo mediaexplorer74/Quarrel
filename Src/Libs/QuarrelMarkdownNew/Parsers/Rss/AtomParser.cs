@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Xml.Linq;
-using Microsoft.Toolkit.Extensions;
+//using Microsoft.Toolkit.Extensions;
 
 namespace Microsoft.Toolkit.Parsers.Rss
 {
@@ -46,7 +46,7 @@ namespace Microsoft.Toolkit.Parsers.Rss
             RssSchema rssItem = new RssSchema
             {
                 Author = GetItemAuthor(item),
-                Title = item.GetSafeElementString("title").Trim().DecodeHtml(),
+                Title = "test",//item.GetSafeElementString("title").Trim().DecodeHtml(), //RnD
                 ImageUrl = GetItemImage(item),
                 PublishDate = item.GetSafeElementDate("published"),
                 FeedUrl = item.GetLink("alternate"),

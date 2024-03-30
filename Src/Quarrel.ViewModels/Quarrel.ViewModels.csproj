@@ -5,16 +5,12 @@
     <LangVersion>7.3</LangVersion>
     <Platforms>ARM;ARM64;x64;x86</Platforms>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <Configurations>Debug;Release;Insider;Insider2.0</Configurations>
+    <Configurations>Debug;Release</Configurations>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
     <PlatformTarget>x86</PlatformTarget>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Insider|x86'">
-    <PlatformTarget>x86</PlatformTarget>
-    <Optimize>true</Optimize>
+	<Optimize>false</Optimize>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
@@ -24,11 +20,7 @@
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
     <PlatformTarget>ARM64</PlatformTarget>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Insider|ARM64'">
-    <PlatformTarget>ARM64</PlatformTarget>
-    <Optimize>true</Optimize>
+	<Optimize>false</Optimize>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
@@ -38,11 +30,7 @@
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <PlatformTarget>ARM</PlatformTarget>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Insider|ARM'">
-    <PlatformTarget>ARM</PlatformTarget>
-    <Optimize>true</Optimize>
+	<Optimize>false</Optimize>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
@@ -52,11 +40,7 @@
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <PlatformTarget>x64</PlatformTarget>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Insider|x64'">
-    <PlatformTarget>x64</PlatformTarget>
-    <Optimize>true</Optimize>
+	<Optimize>false</Optimize>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">

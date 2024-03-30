@@ -41,8 +41,7 @@ namespace Quarrel.RichPresence
             _AppServiceConnection.ServiceClosed += FireConnectionClosed;
             _AppServiceConnection.AppServiceName = "Quarrel.Presence";
             _AppServiceConnection.PackageFamilyName = "38062AvishaiDernis.DiscordUWP_q72k3wbnqqnj6";
-            //_AppServiceConnection.PackageFamilyName = "38062AvishaiDernis.QuarrelInsider_q72k3wbnqqnj6";
-
+     
             ConnectionStatus = await _AppServiceConnection.OpenAsync();
             return ConnectionStatus ?? AppServiceConnectionStatus.Unknown;
         }

@@ -783,7 +783,9 @@
     </UserControl.Resources>
     
     <Grid>
-        <Border x:Name="border" BorderBrush="{ThemeResource SystemControlBackgroundAccentBrush}" BorderThickness="0" CornerRadius="4" Padding="0" Margin="0">
+        <!-- CornerRadius="4" -->
+            <Border x:Name="border" BorderBrush="{ThemeResource SystemControlBackgroundAccentBrush}" 
+                BorderThickness="0" Padding="0" Margin="0">
             <Grid>
                 <ProgressRing x:Name="LoadingRing" IsActive="True" IsHitTestVisible="False" Foreground="{ThemeResource SystemControlBackgroundAccentBrush}"/>
                 <Grid x:Name="Container" SizeChanged="ContainerSizeChanged">

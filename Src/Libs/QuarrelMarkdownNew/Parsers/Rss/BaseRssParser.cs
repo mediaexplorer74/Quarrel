@@ -4,7 +4,7 @@
 
 using System.Collections.Generic;
 using System.Xml.Linq;
-using Microsoft.Toolkit.Extensions;
+//using Microsoft.Toolkit.Extensions;
 
 namespace Microsoft.Toolkit.Parsers.Rss
 {
@@ -43,7 +43,7 @@ namespace Microsoft.Toolkit.Parsers.Rss
         /// <returns>Fixed up content.</returns>
         protected internal static string ProcessHtmlContent(string htmlContent)
         {
-            return htmlContent.FixHtml().SanitizeString();
+            return "test";//htmlContent.FixHtml().SanitizeString();
         }
 
         /// <summary>
@@ -53,7 +53,7 @@ namespace Microsoft.Toolkit.Parsers.Rss
         /// <returns>Summary of the content.</returns>
         protected internal static string ProcessHtmlSummary(string htmlContent)
         {
-            return htmlContent.DecodeHtml().Trim().Truncate(500).SanitizeString();
+            return "testt";//htmlContent.DecodeHtml().Trim().Truncate(500).SanitizeString(); //RnD
         }
     }
 }

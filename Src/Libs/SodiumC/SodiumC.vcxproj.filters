@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
- <ItemGroup>
+  <ItemGroup>
     <Filter Include="Resource Files">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tga;tiff;tif;png;wav;mfcribbon-ms</Extensions>
@@ -18,7 +18,7 @@
       <UniqueIdentifier>{4e5cded3-a4f3-4739-ba66-e92b7774b6e5}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
-   <ItemGroup>
+  <ItemGroup>
     <ClCompile Include="sodium\crypto_aead\aes256gcm\aesni\aead_aes256gcm_aesni.c">
       <Filter>Source Files\sodium</Filter>
     </ClCompile>
@@ -741,5 +741,8 @@
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>

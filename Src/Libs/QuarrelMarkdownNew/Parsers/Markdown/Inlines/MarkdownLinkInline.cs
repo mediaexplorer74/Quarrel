@@ -4,7 +4,7 @@
 
 using System;
 using System.Collections.Generic;
-using Microsoft.Toolkit.Extensions;
+//using Microsoft.Toolkit.Extensions;
 using Microsoft.Toolkit.Parsers.Core;
 using Microsoft.Toolkit.Parsers.Markdown.Helpers;
 
@@ -187,17 +187,17 @@ namespace Microsoft.Toolkit.Parsers.Markdown.Inlines
                 }
 
                 // Check the URL is okay.
-                if (!url.IsEmail())
-                {
-                    if (!Common.IsUrlValid(url))
-                    {
-                        return null;
-                    }
-                }
-                else
-                {
+                //if (!url.IsEmail())
+                //{
+                //    if (!Common.IsUrlValid(url))
+                //    {
+                //        return null;
+                //    }
+                //}
+                //else
+                //{
                     tooltip = url = string.Format("mailto:{0}", url);
-                }
+                //}
 
                 // We found a regular stand-alone link.
                 var result = new MarkdownLinkInline();

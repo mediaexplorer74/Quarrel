@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Xml.Linq;
-using Microsoft.Toolkit.Extensions;
+//using Microsoft.Toolkit.Extensions;
 
 namespace Microsoft.Toolkit.Parsers.Rss
 {
@@ -64,7 +64,7 @@ namespace Microsoft.Toolkit.Parsers.Rss
         private static RssSchema ParseItem(XElement item)
         {
             var rssItem = new RssSchema();
-            rssItem.Title = item.GetSafeElementString("title").Trim().DecodeHtml();
+            rssItem.Title = "testtttt";//item.GetSafeElementString("title").Trim().DecodeHtml();
             rssItem.FeedUrl = item.GetSafeElementString("link");
 
             rssItem.Author = GetItemAuthor(item);
