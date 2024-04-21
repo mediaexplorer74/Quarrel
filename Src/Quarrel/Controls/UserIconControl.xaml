@@ -31,7 +31,6 @@
             </Rectangle>
         </toolkit:DropShadowPanel>
         <Border x:Name="ProfileImageWithoutPresence" 
-                CornerRadius="999999"
                 x:Load="{x:Bind baseconvert:NotBoolToBoolConverter.Convert(ShowPresence), Mode=OneWay}">
             <Image Width="{x:Bind Size, Mode=OneWay}"
                    Height="{x:Bind Size, Mode=OneWay}"

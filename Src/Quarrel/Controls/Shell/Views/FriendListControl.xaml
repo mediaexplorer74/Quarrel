@@ -35,7 +35,7 @@
                     <TextBlock x:Uid="/Controls/PendingTB" Text="PENDING"/>
                     
                     <!--Pending Page button indicator-->
-                    <Border Margin="6,0,0,-2" Background="{ThemeResource InvertedBG}" CornerRadius="2">
+                    <Border Margin="6,0,0,-2" Background="{ThemeResource InvertedBG}">
                         <TextBlock Text="{x:Bind ViewModel.BindablePendingFriends.Count, Mode=OneWay}" Margin="4,0,4,2" Foreground="{ThemeResource SystemControlBackgroundAltHighBrush}"/>
                     </Border>
                 </StackPanel>

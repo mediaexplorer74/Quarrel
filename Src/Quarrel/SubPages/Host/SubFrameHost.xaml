@@ -90,7 +90,7 @@
                     Grid.Row="1"
                     BorderBrush="{ThemeResource SystemControlBackgroundAccentBrush}"
                     Background="{ThemeResource DarkBG}" 
-                    BorderThickness="1" CornerRadius="1">
+                    BorderThickness="1">
                     <ContentControl 
                         x:Name="HostControl" IsTabStop="False"
                         HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"/>

@@ -99,11 +99,12 @@
                          DataContext="{x:Bind}" HorizontalAlignment="Left" MaxHeight="250" Tapped="Expand" />
     </DataTemplate>
     <DataTemplate x:Key="DefaultEmbedTemplate" x:DataType="embedbindables:BindableEmbed">
-        <Border CornerRadius="4"
-                Background="{ThemeResource MidBG}"
+        <Border Background="{ThemeResource MidBG}"
                 HorizontalAlignment="Left">
             <Grid>
-                <Border x:Name="SideBorder" Width="4" HorizontalAlignment="Left" Background="{x:Bind baseconvert:IntColorToBrushConverter.Convert(Model.Color), Mode=OneWay}" CornerRadius="4,0,0,4"/>
+                <Border x:Name="SideBorder" Width="4" HorizontalAlignment="Left" 
+                        Background="{x:Bind baseconvert:IntColorToBrushConverter.Convert(Model.Color), Mode=OneWay}" 
+                        />
                 <StackPanel x:Name="stacker" Margin="16,8,16,8">
                     <Grid x:Name="HeaderGrid">
                         <Grid.RowDefinitions>
@@ -119,8 +120,7 @@
                                         Orientation="Horizontal"
                                         x:Name="AuthorSP"
                                         x:Load="{x:Bind baseconvert:NotNullToBoolConverter.Convert(Model.Author), Mode=OneWay, FallbackValue=False}">
-                                <Border CornerRadius="10"
-                                        Margin="0,0,10,0"
+                                <Border Margin="0,0,10,0"
                                         x:Name="AuthorRect"
                                         x:Load="{x:Bind baseconvert:NotNullToBoolConverter.ConvertString(Model.Author.IconUrl), Mode=OneWay, FallbackValue=False}">
                                     <toolkit:ImageEx Width="20" Height="20" DecodePixelWidth="20" DecodePixelHeight="20" Source="{x:Bind Model.Author.ProxyIconUrl}"/>
@@ -184,7 +184,7 @@
                               VerticalAlignment="Top"
                               x:Name="ThumbnailImage"
                               x:Load="{x:Bind baseconvert:NotNullToBoolConverter.Convert(Model.Thumbnail), Mode=OneWay, FallbackValue=False}">
-                            <Border CornerRadius="3">
+                            <Border>
                                 <toolkit:ImageEx Source="{x:Bind Model.Thumbnail.ProxyUrl, Mode=OneWay}" DataContext="{x:Bind}" MaxWidth="80" MaxHeight="80" Stretch="Uniform" Tapped="Expand"/>
                             </Border>
                         </Grid>
@@ -209,7 +209,7 @@
     </DataTemplate>
 
     <DataTemplate x:Key="InviteTemplate" x:DataType="embedbindables:BindableInvite">
-        <Border Background="#55000000" Padding="8,0" CornerRadius="8">
+        <Border Background="#55000000" Padding="8,0">
             <messagecontrols:InviteControl DataContext="{x:Bind}"/>
         </Border>
     </DataTemplate>

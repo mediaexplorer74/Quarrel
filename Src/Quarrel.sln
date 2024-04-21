@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.10.34707.107
+# Visual Studio 15
+VisualStudioVersion = 15.0.33919.361
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quarrel", "Quarrel\Quarrel.csproj", "{63365B53-1CE1-4F12-BDD8-D93FC3DC8AF3}"
 EndProject
@@ -29,6 +29,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebRTCBackgroundTask", "Tasks\WebRTCBackgroundTask\WebRTCBackgroundTask.csproj", "{EFBCEA90-8AA9-45D3-B321-EFF91DB9677D}"
 EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Tasks\Quarrel.Shared\Quarrel.Shared.projitems*{4b411328-a42f-4bf2-b7b9-5dc44b9006bc}*SharedItemsImports = 13
+		Tasks\Quarrel.Shared\Quarrel.Shared.projitems*{63365b53-1ce1-4f12-bdd8-d93fc3dc8af3}*SharedItemsImports = 4
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|ARM = Debug|ARM
@@ -104,7 +108,7 @@ Global
 		{AB95046D-DFD9-451A-B329-E3D9C0FCF738}.Release|x64.Build.0 = Release|x64
 		{AB95046D-DFD9-451A-B329-E3D9C0FCF738}.Release|x86.ActiveCfg = Release|x86
 		{AB95046D-DFD9-451A-B329-E3D9C0FCF738}.Release|x86.Build.0 = Release|x86
-		{A3A15D18-2C4B-4A06-A5D6-5AD529CFBCA6}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{A3A15D18-2C4B-4A06-A5D6-5AD529CFBCA6}.Debug|Any CPU.ActiveCfg = Debug|x86
 		{A3A15D18-2C4B-4A06-A5D6-5AD529CFBCA6}.Debug|ARM.ActiveCfg = Debug|ARM
 		{A3A15D18-2C4B-4A06-A5D6-5AD529CFBCA6}.Debug|ARM.Build.0 = Debug|ARM
 		{A3A15D18-2C4B-4A06-A5D6-5AD529CFBCA6}.Debug|ARM.Deploy.0 = Debug|ARM
@@ -114,10 +118,10 @@ Global
 		{A3A15D18-2C4B-4A06-A5D6-5AD529CFBCA6}.Debug|x64.ActiveCfg = Debug|x64
 		{A3A15D18-2C4B-4A06-A5D6-5AD529CFBCA6}.Debug|x64.Build.0 = Debug|x64
 		{A3A15D18-2C4B-4A06-A5D6-5AD529CFBCA6}.Debug|x64.Deploy.0 = Debug|x64
-		{A3A15D18-2C4B-4A06-A5D6-5AD529CFBCA6}.Debug|x86.ActiveCfg = Debug|Win32
-		{A3A15D18-2C4B-4A06-A5D6-5AD529CFBCA6}.Debug|x86.Build.0 = Debug|Win32
-		{A3A15D18-2C4B-4A06-A5D6-5AD529CFBCA6}.Debug|x86.Deploy.0 = Debug|Win32
-		{A3A15D18-2C4B-4A06-A5D6-5AD529CFBCA6}.Release|Any CPU.ActiveCfg = Release|Win32
+		{A3A15D18-2C4B-4A06-A5D6-5AD529CFBCA6}.Debug|x86.ActiveCfg = Debug|x86
+		{A3A15D18-2C4B-4A06-A5D6-5AD529CFBCA6}.Debug|x86.Build.0 = Debug|x86
+		{A3A15D18-2C4B-4A06-A5D6-5AD529CFBCA6}.Debug|x86.Deploy.0 = Debug|x86
+		{A3A15D18-2C4B-4A06-A5D6-5AD529CFBCA6}.Release|Any CPU.ActiveCfg = Release|x86
 		{A3A15D18-2C4B-4A06-A5D6-5AD529CFBCA6}.Release|ARM.ActiveCfg = Release|ARM
 		{A3A15D18-2C4B-4A06-A5D6-5AD529CFBCA6}.Release|ARM.Build.0 = Release|ARM
 		{A3A15D18-2C4B-4A06-A5D6-5AD529CFBCA6}.Release|ARM.Deploy.0 = Release|ARM
@@ -127,9 +131,9 @@ Global
 		{A3A15D18-2C4B-4A06-A5D6-5AD529CFBCA6}.Release|x64.ActiveCfg = Release|x64
 		{A3A15D18-2C4B-4A06-A5D6-5AD529CFBCA6}.Release|x64.Build.0 = Release|x64
 		{A3A15D18-2C4B-4A06-A5D6-5AD529CFBCA6}.Release|x64.Deploy.0 = Release|x64
-		{A3A15D18-2C4B-4A06-A5D6-5AD529CFBCA6}.Release|x86.ActiveCfg = Release|Win32
-		{A3A15D18-2C4B-4A06-A5D6-5AD529CFBCA6}.Release|x86.Build.0 = Release|Win32
-		{A3A15D18-2C4B-4A06-A5D6-5AD529CFBCA6}.Release|x86.Deploy.0 = Release|Win32
+		{A3A15D18-2C4B-4A06-A5D6-5AD529CFBCA6}.Release|x86.ActiveCfg = Release|x86
+		{A3A15D18-2C4B-4A06-A5D6-5AD529CFBCA6}.Release|x86.Build.0 = Release|x86
+		{A3A15D18-2C4B-4A06-A5D6-5AD529CFBCA6}.Release|x86.Deploy.0 = Release|x86
 		{02DC7969-F465-4E27-B49F-D7021F8BC424}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{02DC7969-F465-4E27-B49F-D7021F8BC424}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{02DC7969-F465-4E27-B49F-D7021F8BC424}.Debug|ARM.ActiveCfg = Debug|Any CPU
@@ -230,24 +234,26 @@ Global
 		{CF4B8F3F-695F-4BF3-B015-B0B15F2B2883}.Release|x64.Build.0 = Release|x64
 		{CF4B8F3F-695F-4BF3-B015-B0B15F2B2883}.Release|x86.ActiveCfg = Release|x86
 		{CF4B8F3F-695F-4BF3-B015-B0B15F2B2883}.Release|x86.Build.0 = Release|x86
-		{09252CD6-2BBC-4E47-95AA-186E32707E6F}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{09252CD6-2BBC-4E47-95AA-186E32707E6F}.Debug|Any CPU.ActiveCfg = Debug|x86
 		{09252CD6-2BBC-4E47-95AA-186E32707E6F}.Debug|ARM.ActiveCfg = Debug|ARM
 		{09252CD6-2BBC-4E47-95AA-186E32707E6F}.Debug|ARM.Build.0 = Debug|ARM
 		{09252CD6-2BBC-4E47-95AA-186E32707E6F}.Debug|ARM64.ActiveCfg = Debug|ARM64
 		{09252CD6-2BBC-4E47-95AA-186E32707E6F}.Debug|ARM64.Build.0 = Debug|ARM64
 		{09252CD6-2BBC-4E47-95AA-186E32707E6F}.Debug|x64.ActiveCfg = Debug|x64
 		{09252CD6-2BBC-4E47-95AA-186E32707E6F}.Debug|x64.Build.0 = Debug|x64
-		{09252CD6-2BBC-4E47-95AA-186E32707E6F}.Debug|x86.ActiveCfg = Debug|Win32
-		{09252CD6-2BBC-4E47-95AA-186E32707E6F}.Debug|x86.Build.0 = Debug|Win32
-		{09252CD6-2BBC-4E47-95AA-186E32707E6F}.Release|Any CPU.ActiveCfg = Release|Win32
+		{09252CD6-2BBC-4E47-95AA-186E32707E6F}.Debug|x86.ActiveCfg = Debug|x86
+		{09252CD6-2BBC-4E47-95AA-186E32707E6F}.Debug|x86.Build.0 = Debug|x86
+		{09252CD6-2BBC-4E47-95AA-186E32707E6F}.Debug|x86.Deploy.0 = Debug|x86
+		{09252CD6-2BBC-4E47-95AA-186E32707E6F}.Release|Any CPU.ActiveCfg = Release|x86
 		{09252CD6-2BBC-4E47-95AA-186E32707E6F}.Release|ARM.ActiveCfg = Release|ARM
 		{09252CD6-2BBC-4E47-95AA-186E32707E6F}.Release|ARM.Build.0 = Release|ARM
 		{09252CD6-2BBC-4E47-95AA-186E32707E6F}.Release|ARM64.ActiveCfg = Release|ARM
 		{09252CD6-2BBC-4E47-95AA-186E32707E6F}.Release|ARM64.Build.0 = Release|ARM
 		{09252CD6-2BBC-4E47-95AA-186E32707E6F}.Release|x64.ActiveCfg = Release|x64
 		{09252CD6-2BBC-4E47-95AA-186E32707E6F}.Release|x64.Build.0 = Release|x64
-		{09252CD6-2BBC-4E47-95AA-186E32707E6F}.Release|x86.ActiveCfg = Release|Win32
-		{09252CD6-2BBC-4E47-95AA-186E32707E6F}.Release|x86.Build.0 = Release|Win32
+		{09252CD6-2BBC-4E47-95AA-186E32707E6F}.Release|x86.ActiveCfg = Release|x86
+		{09252CD6-2BBC-4E47-95AA-186E32707E6F}.Release|x86.Build.0 = Release|x86
+		{09252CD6-2BBC-4E47-95AA-186E32707E6F}.Release|x86.Deploy.0 = Release|x86
 		{BA3CF28B-1B70-4A74-BFE0-D7FA70876DBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BA3CF28B-1B70-4A74-BFE0-D7FA70876DBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA3CF28B-1B70-4A74-BFE0-D7FA70876DBF}.Debug|ARM.ActiveCfg = Debug|ARM
@@ -293,11 +299,7 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		RESX_CodeReferences = {"Items":[{"Expression":"\\W($File.$Key)\\W","Extensions":".cs,.xaml,.cshtml","IsCaseSensitive":true,"SingleLineComment":"\/\/"},{"Expression":"ResourceManager.GetString\\(\"($Key)\"\\)","Extensions":".cs","IsCaseSensitive":true,"SingleLineComment":"\/\/"},{"Expression":"typeof\\((\\w+\\.)*($File)\\).+\"($Key)\"|\"($Key)\".+typeof\\((\\w+\\.)*($File)\\)","Extensions":".cs","IsCaseSensitive":true,"SingleLineComment":"\/\/"},{"Expression":"\\W($Key)\\W","Extensions":".vb","IsCaseSensitive":false,"SingleLineComment":"'"},{"Expression":"\\W($File::$Key)\\W","Extensions":".cpp,.c,.hxx,.h","IsCaseSensitive":true,"SingleLineComment":"\/\/"},{"Expression":"<%\\$\\s+Resources:\\s*($File)\\s*,\\s*($Key)\\s*%>","Extensions":".aspx,.ascx","IsCaseSensitive":true,"SingleLineComment":null},{"Expression":"StringResourceKey\\.($Key)","Extensions":".cs","IsCaseSensitive":true,"SingleLineComment":"\/\/"},{"Expression":"x:Uid=\"$Key\"","Extensions":".xaml","IsCaseSensitive":false,"SingleLineComment":null}]}
 		SolutionGuid = {793268B2-B709-4010-BEE5-D4C758C84E61}
-	EndGlobalSection
-	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		Tasks\Quarrel.Shared\Quarrel.Shared.projitems*{4b411328-a42f-4bf2-b7b9-5dc44b9006bc}*SharedItemsImports = 13
-		Tasks\Quarrel.Shared\Quarrel.Shared.projitems*{63365b53-1ce1-4f12-bdd8-d93fc3dc8af3}*SharedItemsImports = 4
+		RESX_CodeReferences = {"Items":[{"Expression":"\\W($File.$Key)\\W","Extensions":".cs,.xaml,.cshtml","IsCaseSensitive":true,"SingleLineComment":"\/\/"},{"Expression":"ResourceManager.GetString\\(\"($Key)\"\\)","Extensions":".cs","IsCaseSensitive":true,"SingleLineComment":"\/\/"},{"Expression":"typeof\\((\\w+\\.)*($File)\\).+\"($Key)\"|\"($Key)\".+typeof\\((\\w+\\.)*($File)\\)","Extensions":".cs","IsCaseSensitive":true,"SingleLineComment":"\/\/"},{"Expression":"\\W($Key)\\W","Extensions":".vb","IsCaseSensitive":false,"SingleLineComment":"'"},{"Expression":"\\W($File::$Key)\\W","Extensions":".cpp,.c,.hxx,.h","IsCaseSensitive":true,"SingleLineComment":"\/\/"},{"Expression":"<%\\$\\s+Resources:\\s*($File)\\s*,\\s*($Key)\\s*%>","Extensions":".aspx,.ascx","IsCaseSensitive":true,"SingleLineComment":null},{"Expression":"StringResourceKey\\.($Key)","Extensions":".cs","IsCaseSensitive":true,"SingleLineComment":"\/\/"},{"Expression":"x:Uid=\"$Key\"","Extensions":".xaml","IsCaseSensitive":false,"SingleLineComment":null}]}
 	EndGlobalSection
 EndGlobal

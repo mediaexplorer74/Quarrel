@@ -24,8 +24,7 @@
         <Grid VerticalAlignment="Top">
             <Image x:Name="xboxlogo" Visibility="{x:Bind ViewModel.IsXboxGame}" Opacity="1" Height="26" Width="26" Margin="4,2,14,0" VerticalAlignment="Center" Source="ms-appx:///Assets/Connections/xbox.png"/>
        
-            <!-- CornerRadius="4" -->
-            <Border x:Name="LargeImgRect" x:Load="{x:Bind baseconvert:NotNullToBoolConverter.Convert(ViewModel.Assets), FallbackValue=False}" Margin="0,0,10,0">
+             <Border x:Name="LargeImgRect" x:Load="{x:Bind baseconvert:NotNullToBoolConverter.Convert(ViewModel.Assets), FallbackValue=False}" Margin="0,0,10,0">
                 <controls:ImageEx Width="58" Height="58" Source="{x:Bind ViewModel.LargeImageUrl}"/>
             </Border>
             

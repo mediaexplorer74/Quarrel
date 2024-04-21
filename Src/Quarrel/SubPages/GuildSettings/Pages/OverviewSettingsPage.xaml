@@ -16,7 +16,7 @@
                     <RowDefinition />
                     <RowDefinition />
                 </Grid.RowDefinitions>
-                <Border VerticalAlignment="Top" HorizontalAlignment="Left" CornerRadius="64" Visibility="{x:Bind ViewModel.Guild.HasIcon, Mode=OneWay}">
+                <Border VerticalAlignment="Top" HorizontalAlignment="Left" Visibility="{x:Bind ViewModel.Guild.HasIcon, Mode=OneWay}">
                     <Image Width="128" Height="128" Source="{x:Bind ViewModel.Guild.IconUrl, Mode=OneWay}"/>
                 </Border>
 

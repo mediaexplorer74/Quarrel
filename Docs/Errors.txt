@@ -1,0 +1,6 @@
+Серьезность	Код	Описание	Проект	Файл	Строка	Состояние подавления
+Ошибка	LNK2019	ссылка на неразрешенный внешний символ __imp_crypto_secretbox_easy в функции "public: virtual bool __cdecl Webrtc::StreamTransport::SendRtcp(unsigned char const *,unsigned __int64)" (?SendRtcp@StreamTransport@Webrtc@@UEAA_NPEBE_K@Z)	Webrtc	C:\Users\mediaexplorer\source\repos\!GameDev\Quarrel\Src\Libs\Webrtc\WebrtcManager.obj	1	
+
+
+Серьезность	Код	Описание	Проект	Файл	Строка	Состояние подавления
+Ошибка	LNK2019	ссылка на неразрешенный внешний символ __imp_crypto_secretbox_open_easy в функции "private: void __cdecl winrt::Webrtc::implementation::WebrtcManager::OnMessageReceived(struct winrt::Windows::Networking::Sockets::DatagramSocket const &,struct winrt::Windows::Networking::Sockets::DatagramSocketMessageReceivedEventArgs const &)" (?OnMessageReceived@WebrtcManager@implementation@Webrtc@winrt@@AEAAXAEBUDatagramSocket@Sockets@Networking@Windows@4@AEBUDatagramSocketMessageReceivedEventArgs@6784@@Z)	Webrtc	C:\Users\mediaexplorer\source\repos\!GameDev\Quarrel\Src\Libs\Webrtc\WebrtcManager.obj	1	

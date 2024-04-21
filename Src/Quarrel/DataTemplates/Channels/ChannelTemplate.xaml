@@ -337,8 +337,16 @@
                     IsHitTestVisible="False"
                     Opacity="0"
                     Control.IsTemplateFocusTarget="True"/>
-                        <Rectangle x:Name="bgSelectedIndic" Fill="{ThemeResource SystemAccentColor}" Opacity="0" IsHitTestVisible="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-                        <Border x:Name="Indic" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="{ThemeResource Foreground}" Opacity="0" CornerRadius="0"/>
+                        <Rectangle x:Name="bgSelectedIndic" 
+                                   Fill="{ThemeResource SystemAccentColor}" 
+                                   Opacity="0" IsHitTestVisible="False" 
+                                   HorizontalAlignment="Stretch" 
+                                   VerticalAlignment="Stretch"/>
+                        <Border x:Name="Indic" 
+                                HorizontalAlignment="Stretch" 
+                                VerticalAlignment="Stretch" 
+                                Background="{ThemeResource Foreground}" 
+                                Opacity="0"/>
 
                         <Grid x:Name="ContentPresenterGrid"
               Background="Transparent"
@@ -838,8 +846,7 @@
                        RadiusX="18"
                        RadiusY="18"
                        Opacity="1" />
-            <Border Margin="0,6,6,6"
-                    CornerRadius="18">
+            <Border>
                 <Image Source="{x:Bind ImageUrl, Mode=OneWay}"
                        Width="36"
                        Height="36" />
@@ -1002,8 +1009,7 @@
                        RadiusX="18"
                        RadiusY="18"
                        Opacity="1" />
-            <Border Margin="0,6,6,6"
-                    CornerRadius="18">
+            <Border>
                 <Image Source="{x:Bind ImageUrl, Mode=OneWay}"
                        Width="36"
                        Height="36" />

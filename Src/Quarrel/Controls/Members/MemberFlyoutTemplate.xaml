@@ -362,8 +362,15 @@
                     IsHitTestVisible="False"
                     Opacity="0"
                     Control.IsTemplateFocusTarget="True"/>
-                            <Rectangle x:Name="bgSelectedIndic" Fill="{ThemeResource SystemAccentColor}" Opacity="0" IsHitTestVisible="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-                            <Border x:Name="Indic" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="{ThemeResource Foreground}" Opacity="0" CornerRadius="0"/>
+                            <Rectangle x:Name="bgSelectedIndic" 
+                                       Fill="{ThemeResource SystemAccentColor}" 
+                                       Opacity="0" IsHitTestVisible="False" 
+                                       HorizontalAlignment="Stretch" 
+                                       VerticalAlignment="Stretch"/>
+                            <Border x:Name="Indic" HorizontalAlignment="Stretch" 
+                                    VerticalAlignment="Stretch" 
+                                    Background="{ThemeResource Foreground}" 
+                                    Opacity="0"/>
 
                             <Grid x:Name="ContentPresenterGrid"
               Background="Transparent"
@@ -535,7 +542,7 @@
                               ItemsSource="{x:Bind ViewModel.Roles, Mode=OneWay}" SelectionMode="None">
                         <ListView.ItemTemplate>
                             <DataTemplate x:DataType="models:Role">
-                                <Border CornerRadius="10" BorderThickness="1"
+                                <Border BorderThickness="1"
                                         BorderBrush="{x:Bind baseconvert:IntColorToBrushConverter.Convert(Color)}">
                                     <StackPanel Orientation="Horizontal">
                                         <Ellipse Margin="4,0,0,0" Width="11" Height="11"

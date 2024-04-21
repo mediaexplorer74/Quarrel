@@ -17,7 +17,7 @@
         </Grid.ColumnDefinitions>
 
         <!--Image-->
-        <Border CornerRadius="32" Height="64" Width="64">
+        <Border Height="64" Width="64">
             <tk:ImageEx Source="{x:Bind ViewModel.Model.ProfileImageUrl, Mode=OneWay}"/>
         </Border>
 

@@ -500,6 +500,8 @@
     <Content Include="Assets\DefaultAvatars\QuarrelClassicIcon.png" />
     <Content Include="Assets\DiscordAssets\Crown.png" />
     <Content Include="Assets\DiscordBlurpleIcon.png" />
+    <Content Include="Assets\IconAssets\AppIcon.altform-lightunplated_targetsize-16.png" />
+    <Content Include="Assets\IconAssets\AppIcon.altform-lightunplated_targetsize-48.png" />
     <Content Include="Assets\IconAssets\LargeTile.scale-100.png" />
     <Content Include="Assets\IconAssets\LargeTile.scale-125.png" />
     <Content Include="Assets\IconAssets\LargeTile.scale-150.png" />

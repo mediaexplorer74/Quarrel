@@ -913,8 +913,7 @@
                                 HorizontalAlignment="Stretch"
                                 VerticalAlignment="Stretch"
                                 Background="{ThemeResource Foreground}"
-                                Opacity="0"
-                                CornerRadius="0" />
+                                Opacity="0"/>
 
                         <Grid x:Name="ContentPresenterGrid"
                               Background="Transparent"
@@ -1422,8 +1421,7 @@
                                 HorizontalAlignment="Stretch"
                                 VerticalAlignment="Stretch"
                                 Background="{ThemeResource Foreground}"
-                                Opacity="0"
-                                CornerRadius="0" />
+                                Opacity="0"/>
 
                         <Grid x:Name="ContentPresenterGrid"
                               Background="Transparent"

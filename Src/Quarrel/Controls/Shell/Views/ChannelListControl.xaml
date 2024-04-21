@@ -351,7 +351,10 @@
                     IsHitTestVisible="False"
                     Opacity="0"
                     Control.IsTemplateFocusTarget="True"/>
-                                <Border x:Name="Indic" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="{ThemeResource InvertedBG}" Opacity="0" CornerRadius="0"/>
+                                <Border x:Name="Indic" HorizontalAlignment="Stretch" 
+                                        VerticalAlignment="Stretch" 
+                                        Background="{ThemeResource InvertedBG}" 
+                                        Opacity="0"/>
 
                                 <Grid x:Name="ContentPresenterGrid"
               Background="Transparent"
@@ -368,7 +371,15 @@
                             Margin="{TemplateBinding Padding}" Control.IsTemplateFocusTarget="True"/>
                                 </Grid>
 
-                                <tkcontrols:DropShadowPanel x:Name="focusGlow" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Visibility="Collapsed" Opacity="0" Margin="0,0,0,0"  OffsetX="0" OffsetY="0" BlurRadius="10" Color="{ThemeResource BlurpleColor}">
+                                <tkcontrols:DropShadowPanel 
+                                    x:Name="focusGlow" HorizontalAlignment="Stretch" 
+                                    VerticalAlignment="Stretch"  
+                                    Visibility="Collapsed" 
+                                    Opacity="0" 
+                                    Margin="0,0,0,0"  
+                                    OffsetX="0" 
+                                    OffsetY="0" 
+                                    Color="{ThemeResource BlurpleColor}">
                                     <Rectangle Width="2" Fill="{ThemeResource SystemControlBackgroundAccentBrush}"/>
                                 </tkcontrols:DropShadowPanel>
                                 <!-- The 'Xg' text simulates the amount of space one line of text will occupy.
@@ -452,7 +463,13 @@
                 <Setter Property="Template">
                     <Setter.Value>
                         <ControlTemplate TargetType="ToggleButton">
-                            <ContentPresenter x:Name="ContentPresenter" AutomationProperties.AccessibilityView="Raw" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" CornerRadius="0" ContentTransitions="{TemplateBinding ContentTransitions}" HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" Padding="{TemplateBinding Padding}" VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}">
+                            <ContentPresenter x:Name="ContentPresenter" AutomationProperties.AccessibilityView="Raw" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}" 
+                                ContentTemplate="{TemplateBinding ContentTemplate}" 
+                                Content="{TemplateBinding Content}" 
+                                ContentTransitions="{TemplateBinding ContentTransitions}" 
+                                HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" 
+                                Padding="{TemplateBinding Padding}" 
+                                VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}">
                                 <VisualStateManager.VisualStateGroups>
                                     <VisualStateGroup x:Name="CommonStates">
                                         <VisualState x:Name="Normal">

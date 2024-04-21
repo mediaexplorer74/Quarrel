@@ -186,7 +186,7 @@ namespace Quarrel.SubPages.Host
 
                 // Final setup
                 ContentBorder.BorderThickness = contentBorderThickness;
-                ContentBorder.CornerRadius = new CornerRadius(contentBorderThickness == new Thickness(1) ? 1 : 0);
+               
             }
 
             // Updates the layout according to the current type of content

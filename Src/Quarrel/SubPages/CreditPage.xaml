@@ -84,7 +84,7 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="ListViewItem">
-                        <Border CornerRadius="4">
+                        <Border>
                             <VisualStateManager.VisualStateGroups>
                                 <VisualStateGroup x:Name="FocusStates">
                                     <VisualState x:Name="Focused">
@@ -316,7 +316,10 @@
                     Opacity="0"
                     Control.IsTemplateFocusTarget="True"/>
                                 <Rectangle x:Name="bgSelectedIndic" Fill="{ThemeResource SystemAccentColor}" Opacity="0" IsHitTestVisible="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-                                <Border x:Name="Indic" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="{ThemeResource Foreground}" Opacity="0" CornerRadius="0"/>
+                                <Border x:Name="Indic" HorizontalAlignment="Stretch" 
+                                        VerticalAlignment="Stretch" 
+                                        Background="{ThemeResource Foreground}" 
+                                        Opacity="0"/>
 
                                 <Grid x:Name="ContentPresenterGrid"
               Background="Transparent"

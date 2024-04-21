@@ -22,7 +22,7 @@
             <ColumnDefinition Width="auto"/>
         </Grid.ColumnDefinitions>
         <StackPanel Orientation="Horizontal" Margin="0,12,0,0">
-            <Border CornerRadius="24">
+            <Border>
                 <Image Height="48" Width="48" Source="{x:Bind baseconvert:UriToImageSourceConverter.Convert(ViewModel.IconUrl), Mode=OneWay}"/>
             </Border>
             <TextBlock Text="{x:Bind ViewModel.Model.Guild.Name, Mode=OneWay}" FontSize="16" FontWeight="SemiBold" TextTrimming="CharacterEllipsis"

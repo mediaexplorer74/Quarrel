@@ -67,7 +67,7 @@
             </StackPanel>
             
             <!--Image-->
-            <Border CornerRadius="32" RenderTransformOrigin="0.5,0.5">
+            <Border RenderTransformOrigin="0.5,0.5">
                 <Border.RenderTransform>
                     <TranslateTransform x:Name="ImageTranslate"/>
                 </Border.RenderTransform>

@@ -74,7 +74,8 @@
         <discordconvert:PresenseToBrushConverter x:Key="PresenseToBrushConverter" UseSystemAccentColor="True"/>
     </UserControl.Resources>
     
-    <Border x:Name="border" BorderBrush="{ThemeResource SystemControlBackgroundAccentBrush}" BorderThickness="0" CornerRadius="0">
+    <Border x:Name="border" BorderBrush="{ThemeResource SystemControlBackgroundAccentBrush}" 
+            BorderThickness="0">
         <Grid Background="Black">
             <Grid>
                 <Image Stretch="UniformToFill" Source="{x:Bind ViewModel.User.Model.User.AvatarUrl, Mode=OneWay}" />
@@ -151,7 +152,8 @@
                                 <ListView.ItemTemplate>
                                     <DataTemplate x:DataType="models:SharedFriend">
                                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Margin="0, 10" VerticalAlignment="Top">
-                                            <Border VerticalAlignment="Stretch" HorizontalAlignment="Left" CornerRadius="100">
+                                            <Border VerticalAlignment="Stretch" 
+                                                    HorizontalAlignment="Left">
                                                 <Image Source="{x:Bind AvatarUrl}" Width="42" Height="42" />
                                             </Border>
                                             <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
@@ -174,7 +176,8 @@
                             <TextBlock Text="{x:Bind ViewModel.User.Model.User.Username}" Foreground="White" FontSize="26" VerticalAlignment="Top" FontWeight="SemiLight"/>
                             <TextBlock Text="#" Foreground="White" FontSize="26" Opacity="0.4" Margin="4,0,0,0" VerticalAlignment="Top" FontWeight="Light"/>
                             <TextBlock Text="{x:Bind ViewModel.User.Model.User.Discriminator}" Foreground="White" FontSize="26" Opacity="0.4" Margin="4,0,0,0" VerticalAlignment="Top" FontWeight="Light"/>
-                            <Border x:Name="BotIndicator" Background="{ThemeResource SystemControlBackgroundAccentBrush}" VerticalAlignment="Center" Margin="6,2,0,0" Padding="8,4" CornerRadius="2" Visibility="Collapsed">
+                            <Border x:Name="BotIndicator" Background="{ThemeResource SystemControlBackgroundAccentBrush}" VerticalAlignment="Center" Margin="6,2,0,0"
+                                    Padding="8,4" Visibility="Collapsed">
                                 <TextBlock x:Uid="BotTB" Text="BOT" FontSize="14" VerticalAlignment="Center"/>
                             </Border>
                         </StackPanel>

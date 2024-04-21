@@ -783,22 +783,22 @@
     </UserControl.Resources>
     
     <Grid>
-        <!-- CornerRadius="4" -->
-            <Border x:Name="border" BorderBrush="{ThemeResource SystemControlBackgroundAccentBrush}" 
+         <Border x:Name="border" BorderBrush="{ThemeResource SystemControlBackgroundAccentBrush}" 
                 BorderThickness="0" Padding="0" Margin="0">
             <Grid>
-                <ProgressRing x:Name="LoadingRing" IsActive="True" IsHitTestVisible="False" Foreground="{ThemeResource SystemControlBackgroundAccentBrush}"/>
+                <ProgressRing x:Name="LoadingRing" IsActive="True" IsHitTestVisible="False" 
+                              Foreground="{ThemeResource SystemControlBackgroundAccentBrush}"/>
                 <Grid x:Name="Container" SizeChanged="ContainerSizeChanged">
                     <ScrollViewer ZoomMode="Enabled" MinZoomFactor="1"
-                              HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+                            HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
                         <Grid>
                             <Rectangle Fill="Transparent" Tapped="Rectangle_Tapped"/>
                             <Grid>
                                 <StackPanel x:Name="MultiPageStacker" MinWidth="240" MaxWidth="1000" Margin="68,76,68,48"/>
                                 <tk:ImageEx x:Name="ImageViewer" x:Load="{x:Bind baseconvert:NotBoolToBoolConverter.Convert(ViewModel.IsImageAnimated)}" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                            Opacity="0" ImageExOpened="ImageOpened" Margin="24"/>
+                                        Opacity="0" ImageExOpened="ImageOpened" Margin="24"/>
                                 <MediaElement x:Name="VideoViewer" x:Load="{x:Bind ViewModel.IsImageAnimated}" IsLooping="True" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                              Opacity="0" CurrentStateChanged="VideoStateChanged" Margin="24"/>
+                                            Opacity="0" CurrentStateChanged="VideoStateChanged" Margin="24"/>
                             </Grid>
                         </Grid>
                     </ScrollViewer>

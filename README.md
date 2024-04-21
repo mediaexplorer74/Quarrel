@@ -1,4 +1,4 @@
-# Quarrel - uwp branch
+# Quarrel v21.0.11 - uwp branch
 My fork of Quarrel project for my own micro-research (Goal: some lite version of Quarrel for W10M).
 
 ## About
