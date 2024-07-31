@@ -1,5 +1,5 @@
 # Quarrel v21.1 - uwp branch
-![image](/Images/quarrel.png)
+![Logo](/Images/logo.png)
 
 My fork of Quarrel project for my own micro-research (Goal: some lite version of Quarrel for W10M).
 
@@ -9,8 +9,8 @@ This is "Quarrel V21" (codename):
 - Token auth support realized.
 
 ## Screenshots
-![](/Images/shot01.png)
-![](/Images/shot02.png)
+![Win11](/Images/shot01.png)
+![W10M](/Images/shot02.png)
 
 ## Tech details
 - Os Win. build (target) set at (to) 19041.
@@ -23,6 +23,7 @@ This is "Quarrel V21" (codename):
 - Discord token change Dialog implemented. 
 - Solution optimization (project refactoring) provided (Advertising & App Center Telemetry cut-off).
 - *SendMessage* mode fixed (but it need more testing)
+- VS 2017 Community IDE compatibility realized for better future realtime debug...
 
 ## Reference(s)
 https://github.com/WinAppCommunity/Quarrel/tree/insider Quarrel Insider branch (Discontinued/Obsolete W10M-compatible project)
