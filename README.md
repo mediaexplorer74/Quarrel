@@ -1,5 +1,5 @@
 # Quarrel v21.1 - uwp branch
-![image](/Images/logo.png)
+![image](/Images/quarrel.png)
 
 My fork of Quarrel project for my own micro-research (Goal: some lite version of Quarrel for W10M).
 
