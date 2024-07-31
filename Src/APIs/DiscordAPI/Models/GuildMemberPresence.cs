@@ -7,5 +7,4 @@ namespace DiscordAPI.Models
         [JsonProperty("presence")]
         public Presence Presence { get; set; }
     }
-
 }

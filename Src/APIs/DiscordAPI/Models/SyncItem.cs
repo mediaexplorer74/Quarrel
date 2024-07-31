@@ -2,7 +2,6 @@
 
 namespace DiscordAPI.Models
 {
-
     public class SyncItem
     {
         [JsonProperty("group")]

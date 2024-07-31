@@ -23,5 +23,4 @@ namespace DiscordAPI.Models
         [JsonProperty("groups")]
         public IEnumerable<Group> Groups { get; set; }
     }
-
 }

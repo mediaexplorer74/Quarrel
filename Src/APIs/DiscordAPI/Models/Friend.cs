@@ -2,7 +2,6 @@
 
 namespace DiscordAPI.Models
 {
-
     public class Friend
     {
         [JsonProperty("id")]

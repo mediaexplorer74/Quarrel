@@ -72,8 +72,23 @@ namespace Quarrel.Xaml.Behaviors
         /// </summary>
         public bool ExecuteShiftCommandIfNoKeyboard
         {
-            get => (bool)GetValue(ExecuteShiftCommandIfNoKeyboardProperty);
-            set => SetValue(ExecuteShiftCommandIfNoKeyboardProperty, value);
+            get
+            {
+               bool res = false;
+                try
+                {
+                    res = (bool)GetValue(ExecuteShiftCommandIfNoKeyboardProperty);
+                }
+                catch
+                { }
+
+               return res;
+            }
+
+            set
+            {
+                SetValue(ExecuteShiftCommandIfNoKeyboardProperty, value);
+            }
         }
 
         /// <summary>

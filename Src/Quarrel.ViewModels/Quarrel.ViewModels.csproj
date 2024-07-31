@@ -80,7 +80,6 @@
     <ProjectReference Include="..\APIs\DiscordAPI\DiscordAPI.csproj" />
     <ProjectReference Include="..\APIs\DiscordStatusAPI\DiscordStatusAPI.csproj" />
     <ProjectReference Include="..\APIs\GitHubAPI\GitHubAPI.csproj" />
-    <ProjectReference Include="..\Libs\Webrtc\Webrtc.vcxproj" />
   </ItemGroup>
 
 </Project>

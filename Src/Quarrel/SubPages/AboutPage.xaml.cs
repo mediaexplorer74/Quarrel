@@ -45,10 +45,12 @@ namespace Quarrel.SubPages
         /// Gets the last commit and branch used for build.
         /// </summary>
         // TODO: Localization
-        public string CommitStatus => string.Format(
+        public string CommitStatus => 
+            Helpers.Constants.Localization.GetLocalizedString("CommitFrom");
+           /*string.Format(
             Helpers.Constants.Localization.GetLocalizedString("CommitFrom"),
             ThisAssembly.Git.Commit,
-            ThisAssembly.Git.Branch);
+            ThisAssembly.Git.Branch);*/
 
         /// <inheritdoc/>
         public double MaxExpandedHeight { get; } = 512;

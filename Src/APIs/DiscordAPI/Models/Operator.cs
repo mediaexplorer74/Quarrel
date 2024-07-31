@@ -3,7 +3,6 @@ using System.Collections.Generic;
 
 namespace DiscordAPI.Models
 {
-
     public class Operator
     {
         [JsonProperty("range")]

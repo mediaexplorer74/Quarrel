@@ -27,6 +27,7 @@ namespace DiscordAPI.Models
         [JsonProperty("channel_id")]
         public string ChannelId { get; set; }
     }
+
     public class ModifyWebhookAvatar : ModifyWebhook
     {
         [JsonProperty("avatar")]

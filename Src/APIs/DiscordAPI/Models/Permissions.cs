@@ -4,7 +4,6 @@ using System.Linq;
 
 namespace DiscordAPI.Models
 {
-
     [Flags]
     public enum GuildPermission
     {
@@ -270,12 +269,36 @@ namespace DiscordAPI.Models
         public List<string> GetPermissions()
         {
             List<string> perms = new List<string>();
-            if (Administrator) perms.Add("Administrator");
-            if (AddReactions) perms.Add("ADD_REACTIONS");
-            if (AttachFiles) perms.Add("ATTACH_FILES");
-            if (BanMembers) perms.Add("BAN_MEMBERS");
-            if (ChangeNickname) perms.Add("CHANGE_NICKNAME");
-            if (Connect) perms.Add("CONNECT");
+            if (Administrator)
+            {
+                perms.Add("Administrator");
+            }
+
+            if (AddReactions)
+            {
+                perms.Add("ADD_REACTIONS");
+            }
+
+            if (AttachFiles)
+            {
+                perms.Add("ATTACH_FILES");
+            }
+
+            if (BanMembers)
+            {
+                perms.Add("BAN_MEMBERS");
+            }
+
+            if (ChangeNickname)
+            {
+                perms.Add("CHANGE_NICKNAME");
+            }
+
+            if (Connect)
+            {
+                perms.Add("CONNECT");
+            }
+
             if (CreateInstantInvite) perms.Add("CREATE_INSTANT_INVITE");
             if (DeafenMembers) perms.Add("DEAFEN_MEMBERS");
             if (EmbedLinks) perms.Add("EMBED_LINKS");
@@ -295,16 +318,33 @@ namespace DiscordAPI.Models
             if (SendMessages) perms.Add("SEND_MESSAGES");
             if (SendTtsMessages) perms.Add("SEND_TTS_MESSAGES");
             if (Speak) perms.Add("SPEAK");
-            if (UseExternalEmojis) perms.Add("USE_EXTERNAL_EMOJIS");
-            if (UseVad) perms.Add("USE_VAD");
-            if (ViewAuditLog) perms.Add("VIEW_AUDIT_LOGS");
-            if (PrioritySpeaker) perms.Add("PRIORITY_SPEAKER");
+            if (UseExternalEmojis)
+            {
+                perms.Add("USE_EXTERNAL_EMOJIS");
+            }
+
+            if (UseVad)
+            {
+                perms.Add("USE_VAD");
+            }
+
+            if (ViewAuditLog)
+            {
+                perms.Add("VIEW_AUDIT_LOGS");
+            }
+
+            if (PrioritySpeaker)
+            {
+                perms.Add("PRIORITY_SPEAKER");
+            }
+
             return perms;
         }
 
         private bool GetPerm(GuildPermission perm)
         {
-            return ((_perms & perm) == perm || (_perms & GuildPermission.Administrator) == GuildPermission.Administrator);
+            return (_perms & perm) == perm 
+                || (_perms & GuildPermission.Administrator) == GuildPermission.Administrator;
         }
 
         private void SetPerm(GuildPermission perm, bool value)
@@ -323,18 +363,4 @@ namespace DiscordAPI.Models
 
         private GuildPermission _perms;
     }
-
-    public class PermissionDifference
-    {
-        /// <summary>
-        /// Added permissions in the form of a string list
-        /// </summary>
-        public IEnumerable<string> AddedPermissions { get; set; }
-
-        /// <summary>
-        /// Removed Permissions in the form of a string list
-        /// </summary>
-        public IEnumerable<string> RemovedPermissions { get; set; }
-    }
-
 }
