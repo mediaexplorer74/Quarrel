@@ -8,7 +8,6 @@ This is "Quarrel V21" (codename):
 
 ## Screenshots
 ![](/Images/shot01.png)
-![](/Images/shot02.png)
 
 ## Tech details
 - Os Win. build (target) set at (to) 19041.
