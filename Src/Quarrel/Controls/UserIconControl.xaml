@@ -13,10 +13,10 @@
     d:DesignWidth="400">
 
     <Grid>
-        <toolkit:DropShadowPanel Width="{x:Bind Size, Mode=OneWay}"
+        <!--x:Load="{x:Bind ShowPresence, Mode=OneWay}"-->
+            <toolkit:DropShadowPanel Width="{x:Bind Size, Mode=OneWay}"
                                  Height="{x:Bind Size, Mode=OneWay}"
                                  x:Name="presenceShadow"
-                                 x:Load="{x:Bind ShowPresence, Mode=OneWay}"
                                  BlurRadius="10"
                                  Color="{x:Bind discordconvert:PresenseToColorConverter.Convert(ViewModel.Presence.Status), Mode=OneWay}">
             <Rectangle Width="{x:Bind Size, Mode=OneWay}"
@@ -30,8 +30,9 @@
                 </Rectangle.Fill>
             </Rectangle>
         </toolkit:DropShadowPanel>
-        <Border x:Name="ProfileImageWithoutPresence" 
-                x:Load="{x:Bind baseconvert:NotBoolToBoolConverter.Convert(ShowPresence), Mode=OneWay}">
+
+        <!--x:Load="{x:Bind baseconvert:NotBoolToBoolConverter.Convert(ShowPresence), Mode=OneWay}"-->
+        <Border x:Name="ProfileImageWithoutPresence">
             <Image Width="{x:Bind Size, Mode=OneWay}"
                    Height="{x:Bind Size, Mode=OneWay}"
                    PointerEntered="Image_PointerEntered"

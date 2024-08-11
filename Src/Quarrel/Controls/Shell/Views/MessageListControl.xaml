@@ -45,7 +45,8 @@
         </Grid.RowDefinitions>
 
         <!--Message List-->
-        <ListView x:Name="MessageList" x:Load="True"
+        <!-- x:Load="True"  -->
+            <ListView x:Name="MessageList" 
                   ItemsSource="{x:Bind ViewModel.BindableMessages, Mode=OneWay}" Padding="0,0,0,16"
                   ItemTemplateSelector="{StaticResource MessageTemplateSelector}"
                   SelectionMode="None" IsItemClickEnabled="False" ItemContainerStyle="{StaticResource MessageListItemStyle}" ShowsScrollingPlaceholders="False">
@@ -81,8 +82,12 @@
         </Rectangle>
 
         <!--Typing indicator-->
-        <Grid Visibility="{x:Bind baseconvert:NotNullToVisibilityConverter.Convert(ViewModel.CurrentChannel), Mode=OneWay, FallbackValue=Collapsed}" Margin="12,0,0,0">
-            <StackPanel x:Name="TypingIndicator" x:Load="{x:Bind ViewModel.CurrentChannel.IsTyping, Mode=OneWay}" Orientation="Horizontal" VerticalAlignment="Bottom">
+        <!--x:Load="{x:Bind ViewModel.CurrentChannel.IsTyping, Mode=OneWay}"-->
+            <Grid 
+            Visibility="{x:Bind baseconvert:NotNullToVisibilityConverter.Convert(ViewModel.CurrentChannel), Mode=OneWay, FallbackValue=Collapsed}" 
+            Margin="12,0,0,0">
+            <StackPanel x:Name="TypingIndicator" 
+                        Orientation="Horizontal" VerticalAlignment="Bottom">
                 <controls:TypingIndicator/>
                 <TextBlock Text="{x:Bind ViewModel.CurrentChannel.TypingText, Mode=OneWay}" FontSize="12" Margin="8,0,0,0"/>
             </StackPanel>

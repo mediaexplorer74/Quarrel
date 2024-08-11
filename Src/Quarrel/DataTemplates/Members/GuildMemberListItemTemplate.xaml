@@ -38,25 +38,37 @@
                        Width="2" Height="24" HorizontalAlignment="Left" x:Phase="1"/>
 
                 <!--User Icon-->
-                <controls:UserIconControl DataContext="{x:Bind}" Margin="10,6,6,6" Width="40" Height="40"/>
+                <!--controls:UserIconControl DataContext="{x:Bind}" Margin="10,6,6,6" Width="40" Height="40"/-->
 
                 <StackPanel Grid.Column="1" VerticalAlignment="Center" Margin="4,0,0,0">
                     <StackPanel Orientation="Horizontal">
                         <!--Username or Nickname-->
                         <TextBlock Text="{x:Bind DisplayName, Mode=OneWay}" Foreground="{x:Bind baseconvert:IntColorToBrushConverter.Convert(RoleColor), Mode=OneWay}"
                                VerticalAlignment="Center" FontSize="14" FontWeight="Normal"/>
+                        
                         <!--Guild Owner indicator-->
-                        <Image x:Name="GuildOwnerindicator" Height="12" Source="/Assets/DiscordAssets/Crown.png" Stretch="UniformToFill" Margin="5,0,0,0" x:Load="{x:Bind IsOwner}" x:Phase="3"/>
+                        <!-- x:Load -->
+                            <Image x:Name="GuildOwnerindicator" 
+                                   Visibility="{x:Bind IsOwner}"
+                                   Height="12" 
+                                   Source="/Assets/DiscordAssets/Crown.png" 
+                                   Stretch="UniformToFill" 
+                               Margin="5,0,0,0" x:Phase="3"/>
+                      
                         <!--Bot Indicator-->
-                        <Border x:Name="BotIndicator" 
+                        <!-- x:Load -->
+                            <Border x:Name="BotIndicator" 
+                                Visibility="{x:Bind IsBot}"
                                 Background="{ThemeResource SystemControlBackgroundAccentBrush}" 
-                                Margin="4,0,0,0" Padding="6,0" x:Load="{x:Bind IsBot}" x:Phase="3">
+                                Margin="4,0,0,0" Padding="6,0" x:Phase="3">
                             <TextBlock x:Uid="/Controls/BotTB" Foreground="{ThemeResource Foreground}" Text="BOT" FontSize="10" FontWeight="Bold" VerticalAlignment="Center"/>
                         </Border>
                     </StackPanel>
                     
                     <!--Basic Rich Presence info-->
-                    <StackPanel Orientation="Horizontal" x:Name="richPresence" x:Phase="2" x:Load="{x:Bind baseconvert:NotNullToBoolConverter.Convert(Presence.Game), Mode=OneWay, FallbackValue=False}">
+                    <StackPanel Orientation="Horizontal" x:Name="richPresence" 
+                        Visibility="{x:Bind baseconvert:NotNullToBoolConverter.Convert(Presence.Game), Mode=OneWay, FallbackValue=False}"          
+                        x:Phase="2">
                         <TextBlock Text="{x:Bind profileconvert:PresenceTypeToStatusConverter.Convert(Presence.Game.Type), Mode=OneWay}" Visibility="{x:Bind baseconvert:NotBoolToVisibilityConverter.Convert(Presence.Game.IsCustom), Mode=OneWay}" VerticalAlignment="Center" FontSize="11" FontWeight="SemiLight" Opacity="0.6" Foreground="{ThemeResource Foreground}"/>
                         <TextBlock x:Name="game" Text="{x:Bind Presence.Game.Display, Mode=OneWay}" VerticalAlignment="Center" Opacity="0.8" FontSize="11" FontWeight="Normal" Margin="3,0,0,0" Foreground="{ThemeResource Foreground}"/>
                         <FontIcon Visibility="{x:Bind Presence.Game.IsRich, Mode=OneWay}" x:Name="rich" Glyph="" FontSize="11" Margin="4,0,0,-2" Foreground="{ThemeResource Foreground}"/>

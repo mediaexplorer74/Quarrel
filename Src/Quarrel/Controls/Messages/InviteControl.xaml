@@ -34,7 +34,9 @@
             <TextBlock Text="{x:Bind ViewModel.Model.Inviter.Username}" Opacity=".8" FontSize="14"/>
         </StackPanel>
 
-        <HyperlinkButton x:Name="RemoveButton" x:Load="{x:Bind InviteList, Mode=OneWay}" Style="{ThemeResource PlainTextHyperlinkStyle}"
+        <!--  x:Load="{x:Bind InviteList, Mode=OneWay}"  -->
+            <HyperlinkButton x:Name="RemoveButton" 
+                         Style="{ThemeResource PlainTextHyperlinkStyle}"
                          Foreground="#fff04747"
                          Command="{x:Bind ViewModel.RemoveCommand, Mode=OneWay}"
                          Opacity="0.75" FontFamily="Segoe MDL2 Assets" HorizontalAlignment="Right"
@@ -52,7 +54,8 @@
             <TextBlock x:Name="Description" Text="0 uses, expires in 00:00:00" FontSize="13.333" />
         </StackPanel>-->
 
-        <Button x:Uid="/Controls/JoinBTN" x:Name="JoinButton" x:Load="{x:Bind baseconvert:NotBoolToBoolConverter.Convert(InviteList), Mode=OneWay}"
+        <!--x:Load="{x:Bind baseconvert:NotBoolToBoolConverter.Convert(InviteList), Mode=OneWay}"-->
+            <Button x:Uid="/Controls/JoinBTN" x:Name="JoinButton" 
                 Content="Join" Style="{StaticResource DiscordButton}" Background="{ThemeResource online}" VerticalAlignment="Stretch"
                 Visibility="{x:Bind baseconvert:NotBoolToVisibilityConverter.Convert(ViewModel.Joined), Mode=OneWay}"
                 Grid.Column="1" Grid.Row="0" Grid.RowSpan="3" Margin="16,8,16,8" Padding="16" Width="60" Height="60"

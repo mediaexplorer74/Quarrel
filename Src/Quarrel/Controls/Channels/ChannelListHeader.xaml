@@ -30,8 +30,9 @@
 
         <Grid>
             <!--Banner-->
-            <Image x:Name="Banner"
-                        x:Load="{x:Bind baseconvert:NotNullToBoolConverter.Convert(ViewModel.Model.BannerUri), Mode=OneWay}"
+            <!--  x:Load="{x:Bind baseconvert:NotNullToBoolConverter.Convert(ViewModel.Model.BannerUri), Mode=OneWay}" -->
+                <Image x:Name="Banner"
+                        
                         Source="{x:Bind baseconvert:UriToImageSourceConverter.Convert(ViewModel.Model.BannerUri), Mode=OneWay}"
                         Stretch="UniformToFill"
                         Height="128"

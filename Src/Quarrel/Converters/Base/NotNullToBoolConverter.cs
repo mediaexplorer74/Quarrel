@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Quarrel. All rights reserved.
 
 using System;
+using Windows.UI.Xaml;
 using Windows.UI.Xaml.Data;
 
 namespace Quarrel.Converters.Base
@@ -15,9 +16,15 @@ namespace Quarrel.Converters.Base
         /// </summary>
         /// <param name="value">Item to check.</param>
         /// <returns>Whether or not item is null.</returns>
-        public static bool Convert(object value)
+        /*public static bool Convert(object value)
         {
             return value != null;
+        }
+        */
+
+        public static Visibility Convert(object value)
+        {
+            return (Visibility)(value != null ? Visibility.Visible : Visibility.Collapsed);
         }
 
         /// <summary>

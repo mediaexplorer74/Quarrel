@@ -515,10 +515,10 @@
                 <!--Rich Presence info-->
                 <Grid Visibility="{x:Bind baseconvert:NotNullToVisibilityConverter.Convert(ViewModel.Presence.Game), Mode=OneWay, FallbackValue=Collapsed}">
                     <Rectangle Opacity="0.5">
-                        <Rectangle.Fill>
+                        <!--Rectangle.Fill>
                             <Windows10FallCreatorsUpdate:AcrylicBrush TintOpacity="0.9" TintColor="{x:Bind baseconvert:IntColorToColorConverter.Convert(ViewModel.AccentColor), Mode=OneWay}"
                                           FallbackColor="{x:Bind baseconvert:IntColorToColorConverter.Convert(ViewModel.AccentColor), Mode=OneWay}"/>
-                        </Rectangle.Fill>
+                        </Rectangle.Fill-->
                     </Rectangle>
                     <ListView ItemsSource="{x:Bind ViewModel.Presence.Activities, Mode=OneWay}"
                               IsItemClickEnabled="False" SelectionMode="None">
