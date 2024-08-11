@@ -1,11 +1,11 @@
-﻿<ResourceDictionary
+﻿<!-- xmlns:bindables="using:Quarrel.ViewModels.Models.Bindables"-->
+<ResourceDictionary
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
     xmlns:core="using:Microsoft.Xaml.Interactions.Core"
     xmlns:behaviors="using:Quarrel.Xaml.Behaviors"
     xmlns:markdown="using:Microsoft.Toolkit.Uwp.UI.Controls.Quarrel"
-    xmlns:bindables="using:Quarrel.ViewModels.Models.Bindables"
     xmlns:templateSelectors="using:Quarrel.TemplateSelectors"
     xmlns:messagebindables="using:Quarrel.ViewModels.Models.Bindables.Messages"
     xmlns:embedbindables="using:Quarrel.ViewModels.Models.Bindables.Messages.Embeds"
@@ -19,7 +19,7 @@
     xmlns:media="using:Microsoft.Xaml.Interactions.Media"
     xmlns:controls="using:Quarrel.Controls"
     xmlns:extensions="using:Microsoft.Toolkit.Uwp.UI.Extensions"
-    xmlns:extensions2="using:Microsoft.Toolkit.Uwp.UI.Extensions?IsApiContractPresent(Windows.Foundation.UniversalApiContract,5)"
+    xmlns:extensions2="using:Microsoft.Toolkit.Uwp.UI.Extensions"
     xmlns:winui="using:Microsoft.UI.Xaml.Controls"
     xmlns:system="using:System"
     xmlns:messageConverters="using:Quarrel.Converters.Messages"
@@ -154,7 +154,7 @@
 
                             <markdown:MarkdownTextBlock Text="{x:Bind Model.Description, Mode=OneWay}"
                                                         x:Name="ContentMDBlock"
-                                                        x:Load="{x:Bind baseconvert:NotNullToBoolConverter.ConvertString(Model.Description), Mode=OneWay, FallbackValue=False}"
+                                                        Visibility="{x:Bind baseconvert:NotNullToBoolConverter.Convert(Model.Description), Mode=OneWay, FallbackValue=False}"
                                                         Opacity="0.75"
                                                         FontSize="13"
                                                         Margin="0,0,0,0" />

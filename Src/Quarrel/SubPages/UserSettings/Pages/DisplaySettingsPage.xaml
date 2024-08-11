@@ -5,7 +5,6 @@
     xmlns:local="using:Quarrel.SubPages.UserSettings.Pages"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:Windows10version1809="http://schemas.microsoft.com/winfx/2006/xaml/presentation?IsApiContractPresent(Windows.Foundation.UniversalApiContract, 7)"
     mc:Ignorable="d">
 
     <ScrollViewer>
@@ -34,11 +33,11 @@
             <RadioButton x:Uid="/UserSettings/SystemAccountColorRBTN" x:Name="radioAccent_Windows" Style="{StaticResource DiscordRadioButton}" Foreground="{ThemeResource OGSystemAccentColorBrush}" Content="System Accent Color" GroupName="Accent"
                          IsChecked="{x:Bind ViewModel.SystemAccentColor, Mode=TwoWay}"/>
 
-            <Windows10version1809:TextBlock x:Uid="/UserSettings/AcrylicTB" Text="Acrylic" FontSize="14" FontWeight="SemiBold" Margin="0,12,0,0"/>
-            <Windows10version1809:CheckBox x:Uid="/UserSettings/MessageViewCB" Content="Message View" IsChecked="{x:Bind ViewModel.MessageViewAcrylic, Mode=TwoWay}" Style="{ThemeResource CheckBoxStyle1}"/>
-            <Windows10version1809:CheckBox x:Uid="/UserSettings/ChannelViewCB" Content="Channel and Member View" IsChecked="{x:Bind ViewModel.ChannelViewAcrylic, Mode=TwoWay}" Style="{ThemeResource CheckBoxStyle1}"/>
-            <Windows10version1809:CheckBox x:Uid="/UserSettings/GuildViewCB" Content="Guild View" IsChecked="{x:Bind ViewModel.GuildViewAcrylic, Mode=TwoWay}" Style="{ThemeResource CheckBoxStyle1}"/>
-            <Windows10version1809:CheckBox x:Uid="/UserSettings/CommandBarCB" Content="Command Bar" IsChecked="{x:Bind ViewModel.CommandBarAcrylic, Mode=TwoWay}" Style="{ThemeResource CheckBoxStyle1}"/>
+            <TextBlock x:Uid="/UserSettings/AcrylicTB" Text="Acrylic" FontSize="14" FontWeight="SemiBold" Margin="0,12,0,0"/>
+            <CheckBox x:Uid="/UserSettings/MessageViewCB" Content="Message View" IsChecked="{x:Bind ViewModel.MessageViewAcrylic, Mode=TwoWay}" Style="{ThemeResource CheckBoxStyle1}"/>
+            <CheckBox x:Uid="/UserSettings/ChannelViewCB" Content="Channel and Member View" IsChecked="{x:Bind ViewModel.ChannelViewAcrylic, Mode=TwoWay}" Style="{ThemeResource CheckBoxStyle1}"/>
+            <CheckBox x:Uid="/UserSettings/GuildViewCB" Content="Guild View" IsChecked="{x:Bind ViewModel.GuildViewAcrylic, Mode=TwoWay}" Style="{ThemeResource CheckBoxStyle1}"/>
+            <CheckBox x:Uid="/UserSettings/CommandBarCB" Content="Command Bar" IsChecked="{x:Bind ViewModel.CommandBarAcrylic, Mode=TwoWay}" Style="{ThemeResource CheckBoxStyle1}"/>
 
             <TextBlock x:Uid="/UserSettings/OtherTB" Text="OTHER" FontSize="18" FontWeight="SemiBold" Foreground="{ThemeResource SystemControlBackgroundAccentBrush}" Margin="0,12,0,0"/>
             <CheckBox x:Name="ShowServerMute" Style="{StaticResource CheckBoxStyle1}" Margin="0,0,0,0"
